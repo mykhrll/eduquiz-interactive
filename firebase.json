@@ -1,0 +1,48 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "eduquiz-interactive",
+          "appId": "1:416259209174:android:d16933ac2f6794adbd9677",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "eduquiz-interactive",
+          "configurations": {
+            "android": "1:416259209174:android:d16933ac2f6794adbd9677",
+            "ios": "1:416259209174:ios:9f9986989933ae73bd9677",
+            "macos": "1:416259209174:ios:9f9986989933ae73bd9677",
+            "web": "1:416259209174:web:02dc6a6e21117fecbd9677",
+            "windows": "1:416259209174:web:82ba7da1be104345bd9677"
+          }
+        }
+      }
+    }
+  },
+  "functions": {
+    "source": "functions",
+    "ignore": [
+      "node_modules",
+      ".git",
+      "firebase-debug.log",
+      "firebase-debug.*.log"
+    ]
+  },
+  "hosting": {
+    "public": "build/web",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

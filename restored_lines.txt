@@ -1,0 +1,91 @@
+                ),
+              ],
+            ),
+          ),
+        ),
+        const SizedBox(height: 24),
+        _buildProfileStatCard(
+          Icons.quiz,
+          Tr.get('quizzes_created'),
+          "142",
+          Colors.blue,
+        ),
+        _buildProfileStatCard(
+          Icons.group,
+          Tr.get('total_students'),
+          "350+",
+          Colors.green,
+        ),
+        _buildProfileStatCard(
+          Icons.star,
+          Tr.get('avg_rating'),
+          "4.8/5",
+          Colors.orange,
+        ),
+        const SizedBox(height: 24),
+        Container(
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(16),
+            border: Border.all(color: const Color(0xFFE2E8F0)),
+          ),
+          child: Column(
+            children: [
+              _buildSettingsTile(
+                Icons.person_outline,
+                Tr.get('account_settings'),
+                "Manage your personal information and password",
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => const AccountSettingsPage(),
+                  ),
+                ),
+              ),
+              const Divider(height: 1, color: Color(0xFFE2E8F0)),
+              _buildSettingsTile(
+                Icons.notifications_none,
+                Tr.get('notification_pref'),
+                "Customize alerts 
+              child: Container(
+                padding: const EdgeInsets.all(20),
+                decoration: BoxDecoration(
+                  color: const Color(0xFF86EFAC),
+                  borderRadius: BorderRadius.circular(16),
+                ),
+                child: Column(
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.all(8),
+                      decoration: const BoxDecoration(
+                        color: Colors.white,
+                        shape: BoxShape.circle,
+                      ),
+                      child: const Icon(
+                        Icons.emoji_events,
+                        color: Color(0xFF166534),
+                        size: 28,
+                      ),
+                    ),
+                    const SizedBox(height: 12),
+                    const Text(
+                      "0",
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xFF166534),
+                      ),
+                    ),
+                    const Text(
+                      "BADGES EARNED",
+                      style: TextStyle(
+                        fontSize: 10,
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xFF14532D),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
