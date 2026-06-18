@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://eduquiz-interactive.web.app/sitemap.xml
